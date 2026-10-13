@@ -1,0 +1,360 @@
+:root {
+  --bg-color: #f5f0e8;
+  --card-bg: #ffffff;
+  --primary-color: #2c3e50;
+  --accent-color: #e74c3c;
+  --success-color: #27ae60;
+  --text-color: #333333;
+  --muted-text: #666666;
+  --border-color: #ddd;
+  --warning-bg: #fff3cd;
+  --warning-text: #856404;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background: var(--primary-color);
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+/* Input Section */
+.input-section {
+  max-width: 800px;
+  margin: 2rem auto;
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.input-section h2 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.convert-btn {
+  width: 100%;
+  padding: 0.8rem;
+  background: var(--accent-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background 0.3s;
+}
+
+.convert-btn:hover {
+  background: #c0392b;
+}
+
+.convert-btn:disabled {
+  background: #95a5a6;
+  cursor: not-allowed;
+}
+
+.play-btn {
+  width: 100%;
+  padding: 0.8rem;
+  background: var(--success-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: background 0.3s;
+  display: none;
+}
+
+.play-btn:hover {
+  background: #219150;
+}
+
+/* Warning Area */
+.warning-area {
+  max-width: 800px;
+  margin: 1rem auto;
+  padding: 0.8rem 1.2rem;
+  background: var(--warning-bg);
+  color: var(--warning-text);
+  border-radius: 4px;
+  border: 1px solid #a68608;
+  display: none;
+  font-size: 0.9rem;
+}
+
+.warning-area.show {
+  display: block;
+}
+
+/* Wave Facts Section */
+.wave-facts {
+  max-width: 800px;
+  margin: 2rem auto;
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  display: none;
+}
+
+.wave-facts.show {
+  display: block;
+}
+
+.wave-facts h2 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.facts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+}
+
+.fact-item {
+  padding: 0.5rem;
+  background: #f8f9fa;
+  border-radius: 4px;
+}
+
+.fact-item .label {
+  font-size: 0.8rem;
+  color: var(--muted-text);
+  margin-bottom: 0.2rem;
+  display: block;
+}
+
+.fact-item .value {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* Sample Table */
+.table-section {
+  max-width: 800px;
+  margin: 2rem auto;
+  background: var(--card-bg);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  display: none;
+}
+
+.table-section.show {
+  display: block;
+}
+
+.table-section h2 {
+  color: var(--primary-color);
+  padding: 0.8rem 1rem;
+  border-bottom: 1px solid var(--border-color);
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 0.6rem 0.8rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+th {
+  background: #f8f9fa;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+td:last-child {
+  text-align: center;
+}
+
+.sample-row:hover {
+  background: #f0f8ff;
+}
+
+/* Binary Result */
+.binary-result {
+  max-width: 800px;
+  margin: 2rem auto;
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  display: none;
+  align-items: center;
+  gap: 2rem;
+}
+
+.binary-result.show {
+  display: flex;
+}
+
+.binary-result .binary-line {
+  font-size: 1.5rem;
+  font-family: 'Courier New', monospace;
+  color: var(--primary-color);
+  white-space: nowrap;
+}
+
+.binary-result .total-bits {
+  font-size: 1rem;
+  color: var(--muted-text);
+}
+
+/* Test Results Section */
+.test-results {
+  max-width: 800px;
+  margin: 2rem auto;
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  display: none;
+}
+
+.test-results.show {
+  display: block;
+}
+
+.test-results h2 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.test-cases {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.test-case {
+  padding: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+}
+
+.test-case h3 {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--primary-color);
+}
+
+.test-case p {
+  font-size: 0.85rem;
+  color: var(--muted-text);
+}
+
+/* Explain It Section */
+.explain-section {
+  max-width: 800px;
+  margin: 2rem auto;
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  display: none;
+}
+
+.explain-section.show {
+  display: block;
+}
+
+.explain-section h2 {
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.answers-list {
+  list-style: none;
+}
+
+.answers-list li {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.answers-list li::before {
+  /* counter removed - leading numbers (1, 2, 3, 4) with red/orange color are hidden */
+}
+
+.answers-list .answer-text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .facts-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}

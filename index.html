@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sound-to-Binary Converter</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header>
+    <h1>Sound-to-Binary Converter</h1>
+    <p>Convert sound wave samples to binary representation</p>
+  </header>
+
+  <div class="input-section">
+    <h2>Input Parameters</h2>
+    
+    <div class="form-row">
+      <div class="form-group">
+        <label for="freq">Frequency (Hz)</label>
+        <input type="number" id="freq" min="1" step="1" value="440">
+      </div>
+      <div class="form-group">
+        <label for="amp">Amplitude (0-1)</label>
+        <input type="number" id="amp" min="0" max="1" step="0.01" value="1">
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="samples">Number of Samples</label>
+        <input type="number" id="samples" min="2" max="64" step="1" value="10">
+      </div>
+      <div class="form-group">
+        <label for="bits">Bits per Sample</label>
+        <input type="number" id="bits" min="1" max="8" step="1" value="3">
+      </div>
+    </div>
+
+    <button class="convert-btn" id="convertBtn">CONVERT</button>
+    <button class="play-btn" id="playBtn">PLAY SOUND (Bonus)</button>
+  </div>
+
+  <div class="warning-area" id="warning"></div>
+
+  <div class="wave-facts" id="waveFacts"></div>
+
+  <div class="table-section" id="sampleTable">
+    <table>
+      <thead>
+        <tr>
+          <th>Sample #</th>
+          <th>Time (ms)</th>
+          <th>Amplitude</th>
+          <th>Level</th>
+          <th>Binary</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody">
+      </tbody>
+    </table>
+  </div>
+
+  <div class="binary-result" id="binaryResult">
+    <div>
+      <span class="binary-line" id="binaryLine"></span>
+      <span class="total-bits" id="totalBits"></span>
+    </div>
+  </div>
+
+  <div class="test-results" id="testResults">
+    <h2>Test Results</h2>
+    <div class="test-cases" id="testCases">
+      <!-- Fixed test cases will be injected by JS -->
+    </div>
+  </div>
+
+  <div class="explain-section" id="explainIt">
+    <h2>Explain It</h2>
+    <ol class="answers-list">
+      <li><span class="answer-text">Answer 1: </span><span></span></li>
+      <li><span class="answer-text">Answer 2: </span><span></span></li>
+      <li><span class="answer-text">Answer 3: </span><span></span></li>
+      <li><span class="answer-text">Answer 4: </span><span></span></li>
+    </ol>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
